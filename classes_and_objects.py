@@ -1,21 +1,27 @@
 # -*- coding: cp1252 -*-
 
-# class Competitor with 2 variables and 2 functions
+# class Competitor with 2 variables and 3 functions
 class Competitor:
     color = ""
     points = 0
     def setInfo(self):
         self.color = input("Competitor's color? ")
-        self.points = input("Competitor's points? ")
     def printInfo(self):
         print("Competitor",self.color,"have",self.points,"points!")
+    def goal(self):
+        self.points = +1
+        print("Competitor",self.color,"scored a goal!")
 
 # main function		
 def main():
     # creating a new instance of a class Competitor
     firstObject = Competitor()
-    # ask color and points from user
+    # ask color from user
     firstObject.setInfo()
+    # print info
+    firstObject.printInfo()
+    # firstObject scored a goal
+    firstObject.goal()
     # print info
     firstObject.printInfo()
 
